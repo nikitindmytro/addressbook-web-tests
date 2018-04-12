@@ -6,14 +6,13 @@ import org.openqa.selenium.WebDriver;
 /**
  * Created by PDM-ko on 30.03.2018.
  */
-public class NavigationHelper {
-   private WebDriver driver;
+public class NavigationHelper extends HelperBase{
 
     public NavigationHelper(WebDriver driver) {
-        this.driver=driver;
+        super(driver);
     }
 
     public void gotoGroupPage() {
-      driver.findElement(By.linkText("GROUPS")).click();
+      click(By.linkText("GROUPS"));
     }
 }
