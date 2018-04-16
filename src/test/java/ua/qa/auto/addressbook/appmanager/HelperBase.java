@@ -20,7 +20,19 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         click(locator);
-        driver.findElement(locator).clear();
-        driver.findElement(locator).sendKeys(text);
+
+        if(text != null){
+            String existingText = driver.findElement(locator).getAttribute("value");
+
+            if( existingText.equals(text) ){
+                // ничего делать не нужно
+            }
+            else{
+                driver.findElement(locator).clear();
+                driver.findElement(locator).sendKeys(text);
+                 }
+        }
+        else {// ничего делать не нужно
+        }
     }
 }
