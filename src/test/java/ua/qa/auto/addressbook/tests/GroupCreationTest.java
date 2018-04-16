@@ -8,8 +8,6 @@ public class GroupCreationTest extends TestBase {
 
     @Test
   public void testGroupCreation() throws Exception {
-   // driver.get("http://localhost/addressbook/");
-   // login("admin", "secret");
 
     app.getNavigationHelper().gotoGroupPage();
     app.getGroupHelper().initGroupCreation();

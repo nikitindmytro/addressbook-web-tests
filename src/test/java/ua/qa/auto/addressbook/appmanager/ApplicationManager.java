@@ -18,6 +18,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
+    private ContactHelper contactHelper;
     private String browser;
 
     public ApplicationManager(String browserType) {
@@ -43,6 +44,7 @@ public class ApplicationManager {
         driver.get("http://localhost/addressbook/");
         groupHelper = new GroupHelper(driver);
         navigationHelper = new NavigationHelper(driver);
+        contactHelper = new ContactHelper(driver);
         sessionHelper = new SessionHelper(driver);
         sessionHelper.login("admin", "secret");
     }
@@ -52,10 +54,10 @@ public class ApplicationManager {
         driver.quit();
     }
 
-    public GroupHelper getGroupHelper() {
-        return groupHelper;
+    public GroupHelper getGroupHelper() {return groupHelper;}
+    public ContactHelper getContactHelper() {
+        return contactHelper;
     }
-
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
