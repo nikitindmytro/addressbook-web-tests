@@ -38,7 +38,6 @@ public class ApplicationManager {
             driver = new InternetExplorerDriver();
         }
 
-
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://localhost/addressbook/");

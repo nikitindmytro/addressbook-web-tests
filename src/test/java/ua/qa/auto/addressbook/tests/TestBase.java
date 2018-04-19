@@ -10,7 +10,7 @@ import ua.qa.auto.addressbook.appmanager.ApplicationManager;
  */
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+    protected final ApplicationManager app = new ApplicationManager(BrowserType.IE);
 
     @BeforeClass
     public void beforeEveryTest() {

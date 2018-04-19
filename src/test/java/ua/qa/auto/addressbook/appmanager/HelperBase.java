@@ -1,6 +1,7 @@
 package ua.qa.auto.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -35,4 +36,14 @@ public class HelperBase {
         else {// ничего делать не нужно
         }
     }
+
+    public boolean isElementPresent(By locator){
+        try{
+            driver.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex){
+            return false;
+        }
+    }
+
 }

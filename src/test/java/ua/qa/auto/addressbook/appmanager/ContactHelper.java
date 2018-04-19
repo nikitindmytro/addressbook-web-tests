@@ -22,5 +22,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void submitContactCreation() { click(By.xpath("(//input[@name='submit'])[2]")); }
+    public void gotoContactModificationPage() { click(By.xpath("//img[@alt='EDIT']")); }
 
+    public void submitContactUpdate() { click(By.xpath("(//input[@name='update'])[2]")); }
 }
